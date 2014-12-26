@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.krngrvr09.instatime.InstaTest;
+import com.example.krngrvr09.instatime.InstaTime;
 import com.example.krngrvr09.instatime.PrettyTime;
 
 import java.text.ParseException;
@@ -28,46 +29,9 @@ public class ActivityMain extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        new InstaTest();
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String currentDateandTime = sdf.format(new Date());
-//        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//
-//        Date d1 = null;
-//        Date d2 = null;
-//
-//        try {
-//            d1 = format.parse(currentDateandTime);
-//            d2 = format.parse(String.valueOf("2014-12-11 19:33:56 +0530").replace("+0530", ""));
-//
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
-//        PrettyTime p = new PrettyTime();
-//
-//        String time = p.format(new Date(System.currentTimeMillis() - (d1.getTime() - d2.getTime())));
-//        Log.d("time ago",time);
-//        ListView myListView = (ListView) findViewById(R.id.myListView);
-//        final EditText myEditText = (EditText) findViewById(R.id.myEditText);
-//        final ArrayList<String> todoItems = new ArrayList<String>();
-//        int resID = R.layout.row;
-//        final ArrayAdapter<String> aa = new ArrayAdapter<String>(this, resID,
-//                todoItems);
-//        myListView.setAdapter(aa);
-//        myEditText.setOnKeyListener(new View.OnKeyListener() {
-//            public boolean onKey(View v, int keyCode, KeyEvent event) {
-//                    if (keyCode == KeyEvent.KEYCODE_ENTER) {
-//                        todoItems.add(0, myEditText.getText().toString());
-//                        myEditText.setText("");
-//                        aa.notifyDataSetChanged();
-//                        return true;
-//                    }
-//                return false;
-//            }
-//        });
-//        LinearLayout l = (LinearLayout) findViewById(R.id.linearLayout);
-//        ToDoListItemView toDo = new ToDoListItemView(this);
-//        l.addView(toDo);
+        InstaTime insta = (InstaTime) findViewById(R.id.customView);
+        //insta.setText("2m");
+        insta.setTime(new Date());
     }
 
 

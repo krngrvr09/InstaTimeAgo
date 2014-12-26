@@ -325,7 +325,7 @@ public class PrettyTime
       TimeFormat format = getFormat(duration.getUnit());
       String time = format.format(duration);
        Log.d("wherefinaltime",time);
-      return format.decorate(duration, time);
+      return format.decorate(duration, time.replace(" ",""));
    }
 
    /**
