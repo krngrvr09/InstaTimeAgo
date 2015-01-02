@@ -2,26 +2,10 @@ package com.example.krngrvr09.prettytimetest;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 
-import com.example.krngrvr09.instatime.InstaTest;
 import com.example.krngrvr09.instatime.InstaTime;
-import com.example.krngrvr09.instatime.PrettyTime;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-
 
 public class ActivityMain extends ActionBarActivity {
 
@@ -31,7 +15,10 @@ public class ActivityMain extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         InstaTime insta = (InstaTime) findViewById(R.id.customView);
         //insta.setText("2m");
-        insta.setTime(new Date());
+        //insta.setTime(new Date());
+        insta.setTime("2014-12-11 19:33:56","yyyy-MM-dd HH:mm:ss");
+
+
     }
 
 
